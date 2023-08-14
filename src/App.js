@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <main>
         <section id="home" className="game-section">
-          <h2>Hey, I'm Alouise Quiatchon</h2>
+          <h2 className="my-name">Hey, I'm Alouise Quiatchon</h2>
         </section>
         <section id="journey" className="game-section">
           <h2>My Journey</h2>
@@ -15,7 +15,7 @@ function App() {
             <h3>Fullstack Engineer at Pathstream</h3>
               <p>11/2019 - Present</p>
               <ul>
-                <li>Responsibility or Achievement #1</li>
+                <li>Engineer a robust digital learning platform, specializing in hands-on, project-based courses that enhance student engagement and practical skills application.</li>
                 {/* ... additional responsibilities or achievements ... */}
               </ul>
             </div>
@@ -61,20 +61,17 @@ function App() {
           </div>
         </section>
         <section id="contact" className="game-section">
-          {/*<h2>Contact the Hero</h2>*/}
+          <h2>Contact</h2>
           <p>Residing in the sun-kissed landscapes of California, I devote much of my leisure time to nurturing family bonds. The dream that fuels my passions is the aspiration to one day embrace the self-sufficient charm of homesteading.</p>
           <div className="socials">
-            <a href="https://twitter.com/your_username" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/flashmatrix24" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-twitter"></i>
             </a>
-            <a href="https://www.linkedin.com/in/your_username" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/alouise-quiatchon-b1383b18" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-linkedin"></i>
             </a>
-            <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/alouiseq" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-github"></i>
-            </a>
-            <a href="https://www.facebook.com/your_username" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-facebook"></i>
             </a>
             {/* ... other socials ... */}
           </div>
