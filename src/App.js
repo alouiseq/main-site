@@ -6,7 +6,11 @@ function App() {
     <div className="App">
       <main>
         <section id="home" className="game-section">
-          <h2 className="my-name">Hey, I'm Alouise Quiatchon</h2>
+          <div className="name-area">
+            <h2 className="my-name">
+              Hey,<br />I'm Alouise<br />Quiatchon
+            </h2>
+          </div>
         </section>
         <section id="journey" className="game-section">
           <h2>My Journey</h2>
