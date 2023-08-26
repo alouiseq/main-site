@@ -122,19 +122,24 @@
     text-decoration: none;
   }
 
-  .scroll-button {
+  .scroller {
     position: fixed;
     right: 20px;
-    bottom: 20px;
-    font-size: 24px;
+    height: 42px;
+    width: 40px;
     cursor: pointer;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
   }
 
-  #scrollDown {
-    bottom: 60px; /* Position above the other button */
+  .scroll-up {
+    bottom: 65px; /* Position above the other button */
+    background-image: url('../public/uparrow.jpg');
+  }
+
+  .scroll-down {
+    bottom: 20px; /* Position above the other button */
+    background-image: url('../public/downarrow.jpg');
   }
 }

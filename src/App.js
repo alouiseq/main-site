@@ -96,8 +96,8 @@ const App = () => {
           </div>
         </section>
       </main>
-      <button id="scrollUp" className="scroll-button" onClick={scrollUp}>↑</button>
-      <button id="scrollDown" className="scroll-button" onClick={scrollDown}>↓</button>
+      <div className="scroller scroll-up" onClick={scrollUp} />
+      <div className="scroller scroll-down" onClick={scrollDown} />
       <footer>
         <p>To Be Continued...</p>
       </footer>
