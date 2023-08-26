@@ -1,18 +1,33 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
-function App() {
+const App = () => {
+   const sections = ['home', 'journey', 'contact'];
+
+  const scrollUp = () => {
+    const currentIndex = sections.findIndex((id) => {
+      const section = document.getElementById(id);
+      return section.getBoundingClientRect().top <= 0;
+    });
+    const previousIndex = Math.max(currentIndex - 1, 0);
+    document.getElementById(sections[previousIndex]).scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollDown = () => {
+    const currentIndex = sections.findIndex((id) => {
+      const section = document.getElementById(id);
+      return section.getBoundingClientRect().top <= 0;
+    });
+    const nextIndex = Math.min(currentIndex + 1, sections.length - 1);
+    document.getElementById(sections[nextIndex]).scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="App">
+    <div className="app">
       <main>
-        <section id="home" className="game-section">
-          <div className="name-area">
-            <h2 className="my-name">
-              Hey,<br />I'm Alouise<br />Quiatchon
-            </h2>
-          </div>
+        <section id="home" className="comic-section">
         </section>
-        <section id="journey" className="game-section">
+        <section id="journey" className="comic-section">
           <h2>My Journey</h2>
           <div className="experience-container">
             <div className="experience">
@@ -64,23 +79,25 @@ function App() {
             {/* ... more work experiences ... */}
           </div>
         </section>
-        <section id="contact" className="game-section">
+        <section id="contact" className="comic-section">
           <h2>Contact</h2>
           <p>Residing in the sun-kissed landscapes of California, I devote much of my leisure time to nurturing family bonds. The dream that fuels my passions is the aspiration to one day embrace the self-sufficient charm of homesteading.</p>
           <div className="socials">
             <a href="https://twitter.com/flashmatrix24" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-twitter"></i>
+              <i className="fa fa-twitter fa-lg"></i>
             </a>
             <a href="https://www.linkedin.com/in/alouise-quiatchon-b1383b18" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-linkedin"></i>
+              <i className="fa fa-linkedin fa-lg"></i>
             </a>
             <a href="https://github.com/alouiseq" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-github"></i>
+              <i className="fa fa-github fa-lg"></i>
             </a>
             {/* ... other socials ... */}
           </div>
         </section>
       </main>
+      <button id="scrollUp" className="scroll-button" onClick={scrollUp}>↑</button>
+      <button id="scrollDown" className="scroll-button" onClick={scrollDown}>↓</button>
       <footer>
         <p>To Be Continued...</p>
       </footer>
