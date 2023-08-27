@@ -21,11 +21,26 @@
     font-size: 1.2rem;
   }
 
-  #home {
-    background-image: url('../public/future_ranch.jpg');
+  .home-background {
+    background-image: url('../public/ranch.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+    padding: 0;
+    // background-color: darkolivegreen;
+  }
+    
+  .home-image {
+    background-image: url('../public/comic.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: 999;
+    height: 100vh;
+    // background-color: darkolivegreen;
+  }
+
+  .home-image {
   }
     
   #journey {

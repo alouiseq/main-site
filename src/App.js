@@ -1,4 +1,5 @@
 import React from 'react';
+import experiences from './experiences.json'; 
 import './App.scss';
 
 const App = () => {
@@ -25,58 +26,23 @@ const App = () => {
   return (
     <div className="app">
       <main>
-        <section id="home" className="comic-section">
+        <section id="home" className="comic-section home-background">
+          <div className="home-image" />
         </section>
         <section id="journey" className="comic-section">
           <h2>My Journey</h2>
           <div className="experience-container">
-            <div className="experience">
-            <h3>Fullstack Engineer at Pathstream</h3>
-              <p>11/2019 - Present</p>
-              <ul>
-                <li>Engineer a robust digital learning platform, specializing in hands-on, project-based courses that enhance student engagement and practical skills application.</li>
-                {/* ... additional responsibilities or achievements ... */}
-              </ul>
-            </div>
-            <div className="experience">
-              <h3>Software Engineer at Syapse</h3>
-              <p>02/2016 - 11/2019</p>
-              <ul>
-                <li>Develop enterprise software including integrated patient records, molecular tumor board workflows, and clinical trials prescreen matching to help doctors and hospitals provide the best care to cancer patients through precision medicine and scaling our customer base from 3 to 7 nationwide and 2 in Asia.</li>
-                <li>Contributor to 2 architectural changes that led to the transition from a monolithic application to micro services while supporting and releasing new features to over 5 customers in the current system in a timely manner.</li>
-                Build a precision oncology data and knowledge sharing network with over 400 health systems and impacting over 250k cancer patients a year to share and learn from real world clinical, molecular, treatment, and outcomes data.
-                {/* ... additional responsibilities or achievements ... */}
-              </ul>
-            </div>
-            <div className="experience">
-            <h3>Front-End Engineer at Shutterfly</h3>
-              <p>06/2015 - 02/2016</p>
-              <ul>
-                <li>Designed and implemented a web monitoring application that provides a ‘at a glance’ view of health dashboards across various production servers which saved 10+ hours of engineering and management downtime efforts on a weekly basis.</li>
-                <li>Built dynamic charting visualizations to compare preconfigured service-level agreements and their respective data from tests retrieved from an external real-time analytics system.</li>
-                <li>Created a centralized server outage reporting system to focus on identifying and resolving system/server issues.</li>
-                {/* ... additional responsibilities or achievements ... */}
-              </ul>
-            </div>
-            <div className="experience">
-            <h3>UI Developer at GE Software</h3>
-              <p>09/2014 - 06/2015</p>
-              <ul>
-                <li>Developed a diagnostics and monitoring web interface that provides interactive data visualizations of real time performance saving $150M+ annually due to oil & gas equipment repair and unplanned downtime.</li>
-                <li>Created extensible and reusable widgets that can scale with growth and across different business needs.</li>
-                <li>Implemented an email-like case management application for users to interact, identify, and predict machine behaviors that can prolong life expectancy and increase revenue by $7M/week.</li>
-                {/* ... additional responsibilities or achievements ... */}
-              </ul>
-            </div>
-            <div className="experience">
-            <h3>Education</h3>
-              <p>09/2007 - 05/2012</p>
-              <ul>
-                <li>B.S. & M.S. in Computer Engineering @ San Jose State University</li>
-                {/* ... additional responsibilities or achievements ... */}
-              </ul>
-            </div>
-            {/* ... more work experiences ... */}
+            {experiences.map((exp, index) => (
+              <div className="experience">
+                <h3>{exp.title}</h3>
+                <p>{exp.duration}</p>
+                <ul>
+                  {exp.responsibilities?.map((resp) => (
+                    <li>{resp}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
         <section id="contact" className="comic-section">
@@ -92,13 +58,10 @@ const App = () => {
             <a href="https://github.com/alouiseq" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-github fa-lg"></i>
             </a>
-            {/* ... other socials ... */}
           </div>
         </section>
       </main>
-      <div className="scroller scroll-up" onClick={scrollUp} />
-      <div className="scroller scroll-down" onClick={scrollDown} />
-      <footer>
+      <div className="scroller scroll-up" onClick={scrollUp} /><div className="scroller scroll-down" onClick={scrollDown} /><footer>
         <p>To Be Continued...</p>
       </footer>
     </div>
