@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import 'font-awesome/css/font-awesome.min.css';
 
+$path: './assets/images/';
+
 .app {
   font-family: 'Bangers', cursive;
   background-color: #f5f5f5;
@@ -22,7 +24,7 @@
   }
 
   .home-background {
-    background-image: url('../public/ranch.jpg');
+    background-image: url('#{$path}/ranch.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -30,7 +32,7 @@
   }
 
   .home-image {
-    background-image: url('../public/comic.png');
+    background-image: url('#{$path}/comic.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -41,14 +43,14 @@
   .home-image {}
 
   #journey {
-    background-image: url('../public/cloud.jpg');
+    background-image: url('#{$path}/cloud.jpg');
     background-size: 100%;
     background-position: top;
   }
 
   #contact {
     color: #fff;
-    background-image: url('../public/background2.jpg');
+    background-image: url('#{$path}/background2.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -152,12 +154,12 @@
 
   .scroll-up {
     bottom: 65px;
-    background-image: url('../public/arrow-up-circle-fill.svg');
+    background-image: url('#{$path}/arrow-up-circle-fill.svg');
   }
 
   .scroll-down {
     bottom: 20px;
     /* Position above the other button */
-    background-image: url('../public/arrow-down-circle-fill.svg');
+    background-image: url('#{$path}/arrow-down-circle-fill.svg');
   }
 }

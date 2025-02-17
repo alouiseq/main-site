@@ -1,5 +1,5 @@
 import React from 'react';
-import experiences from './experiences.json';
+import experiences from './assets/dataFiles/experiences.json';
 import './App.scss';
 
 const sections = ['home', 'journey', 'contact'];
