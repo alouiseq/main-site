@@ -1,14 +1,14 @@
 import React from 'react';
-import experiences from './experiences.json'; 
+import experiences from './experiences.json';
 import './App.scss';
 
-const App = () => {
-   const sections = ['home', 'journey', 'contact'];
+const sections = ['home', 'journey', 'contact'];
 
+const App = () => {
   const scrollUp = () => {
     const currentIndex = sections.findIndex((id) => {
       const section = document.getElementById(id);
-      return section.getBoundingClientRect().top <= 0;
+      return section.getBoundingClientRect().top > -100;
     });
     const previousIndex = Math.max(currentIndex - 1, 0);
     document.getElementById(sections[previousIndex]).scrollIntoView({ behavior: 'smooth' });
@@ -17,7 +17,7 @@ const App = () => {
   const scrollDown = () => {
     const currentIndex = sections.findIndex((id) => {
       const section = document.getElementById(id);
-      return section.getBoundingClientRect().top <= 0;
+      return section.getBoundingClientRect().top > -100;
     });
     const nextIndex = Math.min(currentIndex + 1, sections.length - 1);
     document.getElementById(sections[nextIndex]).scrollIntoView({ behavior: 'smooth' });
@@ -61,7 +61,11 @@ const App = () => {
           </div>
         </section>
       </main>
-      <div className="scroller scroll-up" onClick={scrollUp} /><div className="scroller scroll-down" onClick={scrollDown} /><footer>
+      <div className="scroller scroll-up" onClick={scrollUp} />
+      <div className="scroller scroll-down" onClick={scrollDown}>
+        <i class="bi bi-arrow-down-circle-fill"></i>
+      </div>
+      <footer>
         <p>To Be Continued...</p>
       </footer>
     </div>

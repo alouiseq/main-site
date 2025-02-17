@@ -27,9 +27,8 @@
     background-repeat: no-repeat;
     background-position: top;
     padding: 0;
-    // background-color: darkolivegreen;
   }
-    
+
   .home-image {
     background-image: url('../public/comic.png');
     background-size: contain;
@@ -37,28 +36,26 @@
     background-position: bottom;
     z-index: 999;
     height: 100vh;
-    // background-color: darkolivegreen;
   }
 
-  .home-image {
-  }
-    
+  .home-image {}
+
   #journey {
-    background-color: cornflowerblue;
-  }
-    
-  #contact {
-    color: #fff;
-    background-image: url('../public/background.jpg');
+    background-image: url('../public/cloud.jpg');
     background-size: 100%;
-    background-repeat: no-repeat;
     background-position: top;
   }
-  
-  #journey, #contact {
-    border: 5px dashed #000;
-    width: 75%;
-    margin: auto;
+
+  #contact {
+    color: #fff;
+    background-image: url('../public/background2.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  #journey,
+  #contact {
     height: 100%;
   }
 
@@ -67,7 +64,7 @@
     margin-bottom: 10px;
     text-transform: uppercase;
   }
-  
+
   h3 {
     font-size: 1.5rem;
     color: #000;
@@ -111,11 +108,15 @@
   }
 
   .experience:not(:last-child):after {
-    content: ""; /* Create a pseudo-element */
+    content: "";
+    /* Create a pseudo-element */
     display: block;
-    height: 20px; /* Set the height of the line */
-    border: 2px solid #000; /* Style the line */
-    width: 100%; /* Make the line the full width of the container */
+    height: 20px;
+    /* Set the height of the line */
+    border: 2px solid #000;
+    /* Style the line */
+    width: 100%;
+    /* Make the line the full width of the container */
     position: absolute;
     left: 50%;
     top: 100%;
@@ -125,11 +126,13 @@
 
   .socials {
     display: flex;
-    gap: 20px; /* Adjust the gap between the icons */
+    gap: 20px;
+    /* Adjust the gap between the icons */
     justify-content: center;
 
     a {
-      color: lime;
+      color: #fff;
+      font-size: 1rem;
     }
   }
 
@@ -145,16 +148,16 @@
     cursor: pointer;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: top;
   }
 
   .scroll-up {
-    bottom: 65px; /* Position above the other button */
-    background-image: url('../public/uparrow.jpg');
+    bottom: 65px;
+    background-image: url('../public/arrow-up-circle-fill.svg');
   }
 
   .scroll-down {
-    bottom: 20px; /* Position above the other button */
-    background-image: url('../public/downarrow.jpg');
+    bottom: 20px;
+    /* Position above the other button */
+    background-image: url('../public/arrow-down-circle-fill.svg');
   }
 }
