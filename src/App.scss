@@ -1,16 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import 'font-awesome/css/font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
 $path: './assets/images/';
 
 .app {
-  font-family: 'Bangers', cursive;
+  font-family: 'Roboto', sans-serif;
   background-color: #f5f5f5;
   color: #000;
+
+  h2,
+  h3 {
+    font-family: 'Bangers', cursive;
+  }
 
   main {
     overflow-x: hidden;
     overflow-y: auto;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-bottom: 4px solid #000;
+    z-index: 1000; // Ensures the nav is on top of other content
+    padding: 10px 0;
+    text-align: center;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          font-family: 'Bangers', cursive;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          color: #000;
+          text-decoration: none;
+          position: relative; // For the hover effect
+          transition: color 0.3s ease;
+        }
+
+        a:hover {
+          color: #ff4500; // A splash of comic-style color on hover
+        }
+      }
+    }
   }
 
   .comic-section {
@@ -24,7 +67,7 @@ $path: './assets/images/';
   }
 
   .home-background {
-    background-image: url('#{$path}/ranch.jpg');
+    background-image: url('#{$path}/farmhouse.JPG');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -32,28 +75,30 @@ $path: './assets/images/';
   }
 
   .home-image {
-    background-image: url('#{$path}/comic.png');
-    background-size: contain;
+    background-image: url('#{$path}/me_animals.JPG');
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     z-index: 999;
     height: 100vh;
   }
 
-  .home-image {}
-
   #journey {
-    background-image: url('#{$path}/cloud.jpg');
+    background-image: url('#{$path}/me_coding.JPG');
     background-size: 100%;
     background-position: top;
+
+    h2 {
+      color: #fff;
+    }
   }
 
   #contact {
     color: #fff;
+    font-weight: bold;
     background-image: url('#{$path}/background2.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: top;
   }
 
   #journey,
@@ -83,6 +128,7 @@ $path: './assets/images/';
   }
 
   footer {
+    font-family: 'Bangers', cursive;
     padding: 20px;
     background: #f5f5f5;
     border-top: 4px solid #000;
@@ -107,6 +153,12 @@ $path: './assets/images/';
     max-width: 80%;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Add a smooth transition
+
+    &:hover {
+      transform: translateY(-5px); // Moves the card up slightly
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4); // Makes the shadow more pronounced
+    }
   }
 
   .experience:not(:last-child):after {
@@ -150,6 +202,12 @@ $path: './assets/images/';
     cursor: pointer;
     background-size: 100%;
     background-repeat: no-repeat;
+    border: none; // Remove default button border
+    padding: 0;
+
+    &:hover {
+      transform: scale(1.1); // Add a subtle hover effect for buttons
+    }
   }
 
   .scroll-up {

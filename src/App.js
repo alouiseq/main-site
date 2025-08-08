@@ -25,6 +25,13 @@ const App = () => {
 
   return (
     <div className="app">
+      <nav className="main-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
       <main>
         <section id="home" className="comic-section home-background">
           <div className="home-image" />
@@ -61,10 +68,10 @@ const App = () => {
           </div>
         </section>
       </main>
-      <div className="scroller scroll-up" onClick={scrollUp} />
-      <div className="scroller scroll-down" onClick={scrollDown}>
+      <button className="scroller scroll-up" onClick={scrollUp} aria-label="Scroll to previous section" />
+      <button className="scroller scroll-down" onClick={scrollDown} aria-label="Scroll to next section">
         <i class="bi bi-arrow-down-circle-fill"></i>
-      </div>
+      </button>
       <footer>
         <p>To Be Continued...</p>
       </footer>
