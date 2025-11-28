@@ -14,6 +14,21 @@ $path: './assets/images/';
     font-family: 'Bangers', cursive;
   }
 
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+
+    &:focus {
+      top: 0;
+    }
+  }
+
   main {
     overflow-x: hidden;
     overflow-y: auto;
@@ -25,7 +40,7 @@ $path: './assets/images/';
     width: 100%;
     background-color: #f5f5f5;
     border-bottom: 4px solid #000;
-    z-index: 1000; // Ensures the nav is on top of other content
+    z-index: 1000;
     padding: 10px 0;
     text-align: center;
 
@@ -39,18 +54,26 @@ $path: './assets/images/';
       li {
         margin: 0 15px;
 
+        @media (max-width: 768px) {
+          margin: 0 8px;
+        }
+
         a {
           font-family: 'Bangers', cursive;
           font-size: 1.5rem;
           text-transform: uppercase;
           color: #000;
           text-decoration: none;
-          position: relative; // For the hover effect
+          position: relative;
           transition: color 0.3s ease;
+
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
         }
 
         a:hover {
-          color: #ff4500; // A splash of comic-style color on hover
+          color: #ff4500;
         }
       }
     }
@@ -58,12 +81,17 @@ $path: './assets/images/';
 
   .comic-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
+
+    @media (max-width: 768px) {
+      min-height: calc(100vh - 60px);
+      font-size: 1rem;
+    }
   }
 
   .home-background {
@@ -78,17 +106,27 @@ $path: './assets/images/';
     background-image: url('#{$path}/me_animals.JPG');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     z-index: 999;
     height: 100vh;
+
+    @media (max-width: 768px) {
+      background-size: cover;
+    }
   }
 
   #journey {
     background-image: url('#{$path}/me_coding.JPG');
-    background-size: 100%;
+    background-size: cover;
     background-position: top;
 
     h2 {
       color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      background-size: cover;
+      background-position: center;
     }
   }
 
@@ -96,9 +134,13 @@ $path: './assets/images/';
     color: #fff;
     font-weight: bold;
     background-image: url('#{$path}/background2.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+
+    @media (max-width: 768px) {
+      background-position: center;
+    }
   }
 
   #journey,
@@ -152,25 +194,24 @@ $path: './assets/images/';
     font-size: 1rem;
     max-width: 80%;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; // Add a smooth transition
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    @media (max-width: 768px) {
+      max-width: 95%;
+      font-size: 0.9rem;
+      padding: 12px;
+    }
 
     &:hover {
-      transform: translateY(-5px); // Moves the card up slightly
-      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4); // Makes the shadow more pronounced
+      transform: translateY(-5px);
+      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4);
     }
   }
 
   .experience:not(:last-child):after {
     content: "";
-    /* Create a pseudo-element */
     display: block;
-    height: 20px;
-    /* Set the height of the line */
     border: 2px solid #000;
-    /* Style the line */
-    width: 100%;
-    /* Make the line the full width of the container */
     position: absolute;
     left: 50%;
     top: 100%;
@@ -181,7 +222,6 @@ $path: './assets/images/';
   .socials {
     display: flex;
     gap: 20px;
-    /* Adjust the gap between the icons */
     justify-content: center;
 
     a {
@@ -202,11 +242,11 @@ $path: './assets/images/';
     cursor: pointer;
     background-size: 100%;
     background-repeat: no-repeat;
-    border: none; // Remove default button border
+    border: none;
     padding: 0;
 
     &:hover {
-      transform: scale(1.1); // Add a subtle hover effect for buttons
+      transform: scale(1.1);
     }
   }
 
@@ -217,7 +257,6 @@ $path: './assets/images/';
 
   .scroll-down {
     bottom: 20px;
-    /* Position above the other button */
     background-image: url('#{$path}/arrow-down-circle-fill.svg');
   }
 }
