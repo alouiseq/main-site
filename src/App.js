@@ -2,7 +2,7 @@ import React from 'react';
 import experiences from './assets/dataFiles/experiences.json';
 import './App.scss';
 
-const sections = ['home', 'journey', 'contact'];
+const sections = ['home', 'journey', 'projects', 'contact'];
 const SCROLL_THRESHOLD = -100; // Threshold for detecting current section
 
 const App = () => {
@@ -36,6 +36,7 @@ const App = () => {
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#journey">Journey</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -58,6 +59,10 @@ const App = () => {
               </div>
             ))}
           </div>
+        </section>
+        <section id="projects" className="comic-section">
+          <h2>Projects</h2>
+          <p>Coming soon! This section will showcase my portfolio of work.</p>
         </section>
         <section id="contact" className="comic-section">
           <h2>Contact</h2>
