@@ -41,7 +41,7 @@ const ContactSection = () => {
           <h2>Let's Connect</h2>
 
           <p className="intro-text">
-            Building digital products by day, tending to chickens and German Shepherds by evening.
+            Building digital products by day, tending to chickens and German Shepherd / Huskies by evening.
           </p>
 
           <div className="lifestyle-showcase">
