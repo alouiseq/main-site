@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- German Shepherd/Husky inspired dog illustration -->
+  <defs>
+    <linearGradient id="dogGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1DD3B0;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+
+  <!-- Body -->
+  <ellipse cx="32" cy="38" rx="18" ry="16" fill="url(#dogGradient)"/>
+  <ellipse cx="32" cy="38" rx="18" ry="16" stroke="#00D4FF" stroke-width="2" fill="none"/>
+
+  <!-- Head -->
+  <circle cx="32" cy="20" r="10" fill="url(#dogGradient)"/>
+  <circle cx="32" cy="20" r="10" stroke="#00D4FF" stroke-width="2" fill="none"/>
+
+  <!-- Ears (pointed - Shepherd/Husky style) -->
+  <path d="M 24 16 L 20 8 L 26 14" fill="url(#dogGradient)" stroke="#00D4FF" stroke-width="1.5"/>
+  <path d="M 40 16 L 44 8 L 38 14" fill="url(#dogGradient)" stroke="#00D4FF" stroke-width="1.5"/>
+
+  <!-- Eyes -->
+  <circle cx="28" cy="20" r="2" fill="#00D4FF"/>
+  <circle cx="36" cy="20" r="2" fill="#00D4FF"/>
+  <circle cx="28.5" cy="19.5" r="0.8" fill="#E8EAED"/>
+  <circle cx="36.5" cy="19.5" r="0.8" fill="#E8EAED"/>
+
+  <!-- Nose -->
+  <ellipse cx="32" cy="25" rx="2" ry="1.5" fill="#1DD3B0"/>
+
+  <!-- Tail (curved up - happy) -->
+  <path d="M 48 36 Q 54 30 56 24" stroke="#00D4FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Legs -->
+  <line x1="22" y1="52" x2="22" y2="60" stroke="#00D4FF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="30" y1="52" x2="30" y2="60" stroke="#00D4FF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="34" y1="52" x2="34" y2="60" stroke="#00D4FF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="42" y1="52" x2="42" y2="60" stroke="#00D4FF" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Paws -->
+  <circle cx="22" cy="60" r="2" fill="#00D4FF"/>
+  <circle cx="30" cy="60" r="2" fill="#00D4FF"/>
+  <circle cx="34" cy="60" r="2" fill="#00D4FF"/>
+  <circle cx="42" cy="60" r="2" fill="#00D4FF"/>
+</svg>

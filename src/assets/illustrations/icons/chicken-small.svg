@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Small chicken illustration for footer -->
+  <defs>
+    <linearGradient id="chickenFooterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1DD3B0;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#FFB800;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Body -->
+  <ellipse cx="24" cy="28" rx="11" ry="12" fill="url(#chickenFooterGradient)"/>
+  <ellipse cx="24" cy="28" rx="11" ry="12" stroke="#1DD3B0" stroke-width="1.5" fill="none"/>
+
+  <!-- Head -->
+  <circle cx="24" cy="15" r="6" fill="url(#chickenFooterGradient)"/>
+  <circle cx="24" cy="15" r="6" stroke="#1DD3B0" stroke-width="1.5" fill="none"/>
+
+  <!-- Comb -->
+  <path d="M 21 11 Q 22.5 7 24 10 Q 25.5 7 27 11" stroke="#FFB800" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Wattle -->
+  <path d="M 24 19 Q 21 21 22 24" stroke="#FFB800" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Eye -->
+  <circle cx="26" cy="15" r="1.5" fill="#1DD3B0"/>
+  <circle cx="26.3" cy="14.7" r="0.6" fill="#E8EAED"/>
+
+  <!-- Beak -->
+  <path d="M 29 15 L 33 14 L 29 16 Z" fill="#FFB800"/>
+
+  <!-- Wing detail -->
+  <path d="M 33 26 Q 36 28 35 31" stroke="#1DD3B0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 33 29 Q 35 30 33 32" stroke="#1DD3B0" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Legs -->
+  <line x1="20" y1="38" x2="20" y2="43" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/>
+  <line x1="28" y1="38" x2="28" y2="43" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Feet -->
+  <path d="M 17 43 L 20 43 L 23 43" stroke="#FFB800" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 25 43 L 28 43 L 31 43" stroke="#FFB800" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Tail feathers -->
+  <path d="M 14 25 Q 10 24 11 21" stroke="#1DD3B0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 14 28 Q 8 28 9 25" stroke="#1DD3B0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 14 31 Q 10 32 11 34" stroke="#1DD3B0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

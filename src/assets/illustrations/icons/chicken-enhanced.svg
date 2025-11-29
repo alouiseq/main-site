@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Enhanced chicken illustration -->
+  <defs>
+    <linearGradient id="chickenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1DD3B0;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#00D4FF;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+
+  <!-- Body -->
+  <ellipse cx="32" cy="38" rx="16" ry="18" fill="url(#chickenGradient)"/>
+  <ellipse cx="32" cy="38" rx="16" ry="18" stroke="#1DD3B0" stroke-width="2" fill="none"/>
+
+  <!-- Head -->
+  <circle cx="32" cy="20" r="8" fill="url(#chickenGradient)"/>
+  <circle cx="32" cy="20" r="8" stroke="#1DD3B0" stroke-width="2" fill="none"/>
+
+  <!-- Comb (wavy top) -->
+  <path d="M 28 14 Q 30 8 32 12 Q 34 8 36 14" stroke="#FFB800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Wattle (under beak) -->
+  <path d="M 32 26 Q 28 28 30 32" stroke="#FFB800" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Eye -->
+  <circle cx="34" cy="20" r="2" fill="#00D4FF"/>
+  <circle cx="34.5" cy="19.5" r="0.8" fill="#E8EAED"/>
+
+  <!-- Beak -->
+  <path d="M 38 20 L 44 19 L 38 22 Z" fill="#FFB800"/>
+
+  <!-- Wing detail -->
+  <path d="M 44 36 Q 48 38 46 42" stroke="#1DD3B0" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 44 40 Q 46 42 44 44" stroke="#1DD3B0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Legs -->
+  <line x1="26" y1="54" x2="26" y2="60" stroke="#FFB800" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="38" y1="54" x2="38" y2="60" stroke="#FFB800" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Feet (3 toes each) -->
+  <path d="M 22 60 L 26 60 L 30 60" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 34 60 L 38 60 L 42 60" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Tail feathers -->
+  <path d="M 18 34 Q 12 32 14 28" stroke="#1DD3B0" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 18 38 Q 10 38 12 34" stroke="#1DD3B0" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 18 42 Q 12 44 14 46" stroke="#1DD3B0" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

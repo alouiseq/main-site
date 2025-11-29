@@ -4,6 +4,8 @@ import HeroSection from './components/HeroSection';
 import JourneySection from './components/JourneySection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
+import dogSmall from './assets/illustrations/icons/dog-small.svg';
+import chickenSmall from './assets/illustrations/icons/chicken-small.svg';
 import './App.scss';
 
 const sections = ['home', 'journey', 'projects', 'contact'];
@@ -58,8 +60,14 @@ const App = () => {
         <ContactSection />
       </main>
 
-      <footer>
-        <p>To Be Continued...</p>
+      <footer className="app-footer">
+        <div className="footer-content">
+          <img src={dogSmall} alt="" className="footer-icon" aria-hidden="true" />
+          <p className="footer-tagline">
+            Coding by day <span className="sun-emoji">☀️</span> Homesteading by evening <span className="moon-emoji">🌙</span>
+          </p>
+          <img src={chickenSmall} alt="" className="footer-icon" aria-hidden="true" />
+        </div>
       </footer>
     </div>
   );

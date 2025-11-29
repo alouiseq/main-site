@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInLeft, fadeInRight } from '../utils/animationVariants';
 import codeBracket from '../assets/illustrations/icons/code-bracket.svg';
-import chicken from '../assets/illustrations/icons/chicken.svg';
+import chicken from '../assets/illustrations/icons/chicken-enhanced.svg';
+import dog from '../assets/illustrations/icons/dog.svg';
 import './ContactSection.scss';
 
 const ContactSection = () => {
@@ -39,29 +40,50 @@ const ContactSection = () => {
         >
           <h2>Let's Connect</h2>
 
-          <div className="lifestyle-icons">
-            <div className="icon-item">
-              <img src={codeBracket} alt="" aria-hidden="true" />
-              <span>Engineering</span>
-            </div>
-            <div className="icon-item">
-              <img src={chicken} alt="" aria-hidden="true" />
-              <span>Homesteading</span>
-            </div>
-            <div className="icon-item">
-              <i className="fa fa-heart" aria-hidden="true" />
-              <span>Family</span>
-            </div>
+          <p className="intro-text">
+            Building digital products by day, tending to chickens and German Shepherds by evening.
+          </p>
+
+          <div className="lifestyle-showcase">
+            <motion.div
+              className="lifestyle-card"
+              whileHover={{ y: -5, boxShadow: "0 12px 32px rgba(0, 212, 255, 0.3)" }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="icon-circle">
+                <img src={codeBracket} alt="" aria-hidden="true" />
+              </div>
+              <h4>Tech & Engineering</h4>
+              <p>Building scalable web applications and precision software</p>
+            </motion.div>
+
+            <motion.div
+              className="lifestyle-card"
+              whileHover={{ y: -5, boxShadow: "0 12px 32px rgba(29, 211, 176, 0.3)" }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="icon-circle">
+                <img src={dog} alt="" aria-hidden="true" />
+              </div>
+              <h4>Family & Dogs</h4>
+              <p>Two German Shepherd/Husky mixes keeping life interesting</p>
+            </motion.div>
+
+            <motion.div
+              className="lifestyle-card"
+              whileHover={{ y: -5, boxShadow: "0 12px 32px rgba(255, 184, 0, 0.3)" }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="icon-circle">
+                <img src={chicken} alt="" aria-hidden="true" />
+              </div>
+              <h4>Homesteading</h4>
+              <p>Chickens, self-sufficiency, and the California dream</p>
+            </motion.div>
           </div>
 
           <p className="location-text">
             <i className="fa fa-map-marker" aria-hidden="true" /> Based in sunny California
-          </p>
-
-          <p className="bio-text">
-            Building digital products by day, tending to chickens and German Shepherds
-            by evening. Always excited to discuss tech, homesteading, or the
-            perfect intersection of both.
           </p>
         </motion.div>
 
