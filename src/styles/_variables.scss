@@ -1,0 +1,38 @@
+// MCU-Inspired Color Palette
+// Primary Colors
+$deep-space-blue: #0A1628;
+$arc-reactor-blue: #00D4FF;
+$vibranium-purple: #6B46C1;
+$midnight-navy: #1A2332;
+$dark-gunmetal: #2D3748;
+
+// Metallic Accents
+$silver-chrome: #C0C5CE;
+$gold-nano: #FFB800;
+$platinum: #E8EAED;
+$energy-teal: #1DD3B0;
+$warning-amber: #FF9500;
+
+// Typography
+$font-heading: 'Orbitron', sans-serif;
+$font-body: 'Roboto', sans-serif;
+$font-tech: 'Rajdhani', sans-serif;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1440px;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 6rem;
+
+// Z-index layers
+$z-background: 0;
+$z-content: 10;
+$z-interactive: 100;
+$z-navigation: 1000;
+$z-modal: 10000;

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Code brackets icon -->
+  <path d="M14 10 L6 24 L14 38" stroke="#00D4FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M34 10 L42 24 L34 38" stroke="#00D4FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="28" y1="14" x2="20" y2="34" stroke="#6B46C1" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

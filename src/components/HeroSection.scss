@@ -1,0 +1,142 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+
+  .hero-gradient-bg {
+    position: absolute;
+    inset: 0;
+    @include hero-gradient;
+    z-index: $z-background;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    padding: 2rem;
+    z-index: $z-content;
+
+    @include responsive($mobile) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      .name-text {
+        display: block;
+        font-size: 3.5rem;
+        @include gradient-text;
+        margin-bottom: 0.5rem;
+
+        @include responsive($mobile) {
+          font-size: 2.5rem;
+        }
+      }
+
+      .tech-label {
+        display: block;
+        font-size: 1.5rem;
+        color: $silver-chrome;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+
+        @include responsive($mobile) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+    color: $platinum;
+    line-height: 1.8;
+    margin-top: 1.5rem;
+
+    @include responsive($mobile) {
+      font-size: 1rem;
+    }
+
+    .accent {
+      color: $arc-reactor-blue;
+      font-weight: 500;
+    }
+  }
+
+  .cta-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    @include tech-gradient;
+    border: none;
+    border-radius: 4px;
+    color: $deep-space-blue;
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3);
+    align-self: flex-start;
+
+    @include responsive($mobile) {
+      align-self: center;
+    }
+
+    &:focus {
+      outline: 2px solid $arc-reactor-blue;
+      outline-offset: 2px;
+    }
+  }
+
+  .hero-illustration {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .illustration-glow {
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, transparent 70%);
+      z-index: 1;
+      filter: blur(30px);
+      pointer-events: none;
+    }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: $z-content;
+
+    i {
+      font-size: 2rem;
+      color: $arc-reactor-blue;
+    }
+  }
+}

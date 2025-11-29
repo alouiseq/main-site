@@ -1,0 +1,80 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.projects-section {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  @include hero-gradient;
+  @include flex-center;
+
+  .coming-soon-container {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .coming-soon-content {
+    .icon-large {
+      font-size: 5rem;
+      color: $arc-reactor-blue;
+      @include glow-effect($arc-reactor-blue, 0.5);
+      display: inline-block;
+      margin-bottom: 2rem;
+
+      @include responsive($mobile) {
+        font-size: 3.5rem;
+      }
+    }
+
+    h2 {
+      font-family: $font-heading;
+      font-size: 2.5rem;
+      color: $platinum;
+      margin-bottom: 1rem;
+
+      @include responsive($mobile) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $silver-chrome;
+      margin-bottom: 3rem;
+
+      @include responsive($mobile) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .tech-preview {
+    .preview-label {
+      display: block;
+      margin-bottom: 1rem;
+      color: $arc-reactor-blue;
+    }
+
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+
+      .tech-badge {
+        @include glass-morphism(0.8);
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-family: $font-tech;
+        font-weight: 600;
+        color: $platinum;
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: rgba(0, 212, 255, 0.6);
+          @include glow-effect($arc-reactor-blue, 0.3);
+        }
+      }
+    }
+  }
+}

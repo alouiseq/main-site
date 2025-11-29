@@ -1,0 +1,55 @@
+@import './variables';
+
+// Glass Morphism Effect
+@mixin glass-morphism($opacity: 0.7) {
+  background: rgba(26, 35, 50, $opacity);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(192, 197, 206, 0.2);
+}
+
+// Tech Gradient
+@mixin tech-gradient {
+  background: linear-gradient(90deg, $arc-reactor-blue, $vibranium-purple);
+}
+
+// Glow Effect
+@mixin glow-effect($color: $arc-reactor-blue, $intensity: 0.3) {
+  box-shadow: 0 0 20px rgba($color, $intensity);
+}
+
+// Hero Gradient Background
+@mixin hero-gradient {
+  background: linear-gradient(135deg, $deep-space-blue 0%, $midnight-navy 50%, $dark-gunmetal 100%);
+}
+
+// Card Gradient Background
+@mixin card-gradient {
+  background: linear-gradient(
+    to bottom right,
+    rgba(26, 35, 50, 0.95),
+    rgba(13, 22, 39, 0.98)
+  );
+}
+
+// Responsive Breakpoint
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Flex Center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Gradient Text
+@mixin gradient-text($gradient: linear-gradient(90deg, $arc-reactor-blue, $vibranium-purple)) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

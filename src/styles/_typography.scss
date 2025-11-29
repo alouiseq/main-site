@@ -1,0 +1,92 @@
+@import './variables';
+@import './mixins';
+
+// Typography Hierarchy
+h1 {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+
+  @include responsive($mobile) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.03em;
+  color: $platinum;
+  margin: 0 0 $spacing-md;
+
+  @include responsive($mobile) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-family: $font-heading;
+  font-weight: 500;
+  font-size: 1.75rem;
+  color: $platinum;
+  margin: 0 0 $spacing-sm;
+
+  @include responsive($mobile) {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-family: $font-heading;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: $platinum;
+  margin: 0;
+
+  @include responsive($mobile) {
+    font-size: 1.1rem;
+  }
+}
+
+p {
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $silver-chrome;
+  margin: 0 0 $spacing-sm;
+}
+
+// Tech Label Style
+.tech-label {
+  font-family: $font-tech;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  color: $silver-chrome;
+}
+
+// Gradient Text Style
+.gradient-text {
+  @include gradient-text;
+}
+
+// Link Styles
+a {
+  color: $arc-reactor-blue;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $energy-teal;
+  }
+
+  &:focus {
+    outline: 2px solid $arc-reactor-blue;
+    outline-offset: 2px;
+  }
+}

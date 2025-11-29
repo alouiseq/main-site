@@ -1,0 +1,143 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.journey-section {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, $deep-space-blue 0%, $midnight-navy 100%);
+  position: relative;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-family: $font-heading;
+      font-size: 2.5rem;
+      color: $platinum;
+      position: relative;
+      display: inline-block;
+    }
+
+    .header-accent-line {
+      width: 100px;
+      height: 3px;
+      @include tech-gradient;
+      margin: 1rem auto;
+    }
+  }
+
+  .timeline-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .experience-card {
+    @include card-gradient;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      @include tech-gradient;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  .card-corner-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, transparent 50%, rgba(0, 212, 255, 0.2) 50%);
+    pointer-events: none;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      background: $arc-reactor-blue;
+      border-radius: 50%;
+      @include glow-effect($arc-reactor-blue, 0.8);
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-family: $font-heading;
+      color: $platinum;
+      margin: 0;
+      font-size: 1.5rem;
+
+      @include responsive($mobile) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .duration {
+    color: $silver-chrome;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .responsibilities {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      color: $platinum;
+      font-family: $font-body;
+      line-height: 1.6;
+
+      .accent-icon {
+        color: $energy-teal;
+        margin-top: 0.25rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .card-pattern-overlay {
+    position: absolute;
+    bottom: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
