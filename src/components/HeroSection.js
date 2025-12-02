@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeInLeft, fadeInRight } from '../utils/animationVariants';
-import heroIllustration from '../assets/illustrations/hero/hero-illustration.svg';
+import heroIllustration from '../assets/images/me_coding_animals.png';
 import './HeroSection.scss';
 
 const HeroSection = () => {
@@ -47,11 +47,14 @@ const HeroSection = () => {
           animate="visible"
           variants={fadeInRight}
         >
-          <img
-            src={heroIllustration}
-            alt="Tech illustration"
-            loading="eager"
-          />
+          <div className="image-wrapper">
+            <img
+              src={heroIllustration}
+              alt="Alouise coding with animals"
+              loading="eager"
+            />
+            <div className="image-overlay" />
+          </div>
           <div className="illustration-glow" />
         </motion.div>
       </div>

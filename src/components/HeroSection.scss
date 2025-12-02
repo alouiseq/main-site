@@ -109,20 +109,37 @@
     align-items: center;
     justify-content: center;
 
-    img {
+    .image-wrapper {
+      position: relative;
       width: 100%;
       max-width: 500px;
-      height: auto;
-      position: relative;
       z-index: 2;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        filter: brightness(1.05) contrast(1.1) saturate(1.2);
+        box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+      }
+
+      .image-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(107, 70, 193, 0.05) 100%);
+        pointer-events: none;
+        border-radius: 8px;
+        mix-blend-mode: overlay;
+      }
     }
 
     .illustration-glow {
       position: absolute;
       inset: -20px;
-      background: radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.4) 0%, rgba(107, 70, 193, 0.2) 50%, transparent 70%);
       z-index: 1;
-      filter: blur(30px);
+      filter: blur(40px);
       pointer-events: none;
     }
   }
