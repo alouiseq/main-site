@@ -9,39 +9,56 @@ import chickenSmall from './assets/illustrations/icons/chicken-small.svg';
 import './App.scss';
 
 const sections = ['home', 'journey', 'projects', 'contact'];
-const SCROLL_THRESHOLD = -100;
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      // Find the section currently in view
-      const currentIndex = sections.findIndex((id) => {
+      // Find which section is currently most visible in the viewport
+      let maxVisibleSection = sections[0];
+      let maxVisibleHeight = 0;
+
+      sections.forEach((id) => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          return rect.top > SCROLL_THRESHOLD;
+          const viewportHeight = window.innerHeight;
+
+          // Calculate how much of the section is visible in viewport
+          const visibleTop = Math.max(0, rect.top);
+          const visibleBottom = Math.min(viewportHeight, rect.bottom);
+          const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+
+          if (visibleHeight > maxVisibleHeight) {
+            maxVisibleHeight = visibleHeight;
+            maxVisibleSection = id;
+          }
         }
-        return false;
       });
 
-      if (currentIndex !== -1) {
-        setActiveSection(sections[currentIndex]);
-      } else {
-        // If scrolled past all sections, set to last section
-        setActiveSection(sections[sections.length - 1]);
-      }
+      setActiveSection(maxVisibleSection);
     };
 
     // Initial check
     handleScroll();
 
-    // Add scroll listener
-    window.addEventListener('scroll', handleScroll);
+    // Add scroll listener with throttle for better performance
+    let ticking = false;
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', scrollListener);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', scrollListener);
     };
   }, []);
 
