@@ -5,7 +5,7 @@
     "tagline": "10X your fitness journey",
     "description": "A modern workout planning and progress tracking platform featuring a comprehensive exercise library, weekly calendar-based scheduling, and 3D muscle visualization to help users achieve their fitness goals.",
     "image": "tenxrep.png",
-    "liveUrl": "https://tenxrep.alouisequiatchon.com",
+    "liveUrl": "https://tenxrep.com",
     "githubUrl": "https://github.com/alouiseq/tenxrep",
     "techStack": {
       "frontend": ["React", "TypeScript", "Vite", "Tailwind CSS", "Three.js"],
