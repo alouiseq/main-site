@@ -11,14 +11,14 @@
     "duration": "February 2016 - November 2019",
     "responsibilities": [
       "Develop enterprise software including integrated patient records, molecular tumor board workflows, and clinical trials prescreen matching to help doctors and hospitals provide the best care to cancer patients through precision medicine and scaling our customer base from 3 to 7 nationwide and 2 in Asia.",
-      "Contributor to 2 architectural changes that led to the transition from a monolithic application to micro services while supporting and releasing new features to over 5 customers in the current system in a timely manner."
+      "Contributor to 2 architectural changes that led to the transition from a monolithic application to microservices while supporting and releasing new features to over 5 customers in the current system in a timely manner."
     ]
   },
   {
     "title": "Front-End Engineer at Shutterfly",
     "duration": "June 2015 - February 2016",
     "responsibilities": [
-      "Designed and implemented a web monitoring application that provides a 'at a glance' view of health dashboards across various production servers which saved 10+ hours of engineering and management downtime efforts on a weekly basis.",
+      "Designed and implemented a web monitoring application that provides an 'at-a-glance' view of health dashboards across various production servers which saved 10+ hours of engineering and management downtime efforts on a weekly basis.",
       "Built dynamic charting visualizations to compare preconfigured service-level agreements and their respective data from tests retrieved from an external real-time analytics system.",
       "Created a centralized server outage reporting system to focus on identifying and resolving system/server issues."
     ]

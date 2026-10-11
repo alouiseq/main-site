@@ -23,7 +23,7 @@ const ContactSection = () => {
     {
       name: 'Twitter',
       icon: 'fa-twitter',
-      url: 'https://twitter.com/flashmatrix24',
+      url: 'https://x.com/exectheedge',
       description: 'Thoughts & updates'
     }
   ];
