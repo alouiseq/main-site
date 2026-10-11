@@ -19,12 +19,6 @@ const ContactSection = () => {
       icon: 'fa-linkedin',
       url: 'https://www.linkedin.com/in/alouise-quiatchon-b1383b18',
       description: 'Professional network'
-    },
-    {
-      name: 'Twitter',
-      icon: 'fa-twitter',
-      url: 'https://twitter.com/flashmatrix24',
-      description: 'Thoughts & updates'
     }
   ];
 

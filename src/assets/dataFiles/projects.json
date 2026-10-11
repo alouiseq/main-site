@@ -6,7 +6,6 @@
     "description": "A modern workout planning and progress tracking platform featuring a comprehensive exercise library, weekly calendar-based scheduling, and 3D muscle visualization to help users achieve their fitness goals.",
     "image": "tenxrep.png",
     "liveUrl": "https://tenxrep.com",
-    "githubUrl": "https://github.com/alouiseq/tenxrep",
     "techStack": {
       "frontend": ["React", "TypeScript", "Vite", "Tailwind CSS", "Three.js"],
       "backend": ["FastAPI", "Python", "PostgreSQL"],
@@ -21,7 +20,7 @@
     "description": "A simple progress tracker web application that allows you to track progress towards your goals by uploading task files, with persistent local storage to save your progress.",
     "image": "ptracker.png",
     "liveUrl": "https://ptracker.alouisequiatchon.com",
-    "githubUrl": "https://github.com/alouiseq/ptracker",
+    "githubUrl": "https://github.com/alouiseq/progress-tracker",
     "techStack": {
       "frontend": ["React", "Bootstrap"],
       "storage": ["Local Storage"]
