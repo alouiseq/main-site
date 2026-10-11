@@ -9,9 +9,9 @@ ROOT_DIR="$HOME/code/main-site"
 # Kill existing session if it exists
 tmux kill-session -t $SESSION 2>/dev/null
 
-# Dev window: yarn start
+# Dev window: npm start
 tmux new-session -d -s $SESSION -n "dev" -c "$ROOT_DIR"
-tmux send-keys -t $SESSION:dev 'yarn start' C-m
+tmux send-keys -t $SESSION:dev 'npm start' C-m
 
 # Root window
 tmux new-window -t $SESSION -n "root" -c "$ROOT_DIR"
