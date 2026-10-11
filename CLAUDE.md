@@ -134,7 +134,7 @@ npm run build  # Creates optimized build/ folder
 ```bash
 npm test  # Interactive watch mode
 ```
-`src/App.test.js` is a smoke test: it renders `<App />` and checks the nav, the sections, and that every entry in the JSON data files renders. `src/setupTests.js` stubs `IntersectionObserver`, which jsdom lacks and framer-motion's `whileInView` needs. For a single non-interactive run use `CI=true npm test -- --watchAll=false`. The deploy workflow does not run tests.
+`src/App.test.js` is a smoke test: it renders `<App />` and checks the nav, the sections, and that every entry in the JSON data files renders. `src/setupTests.js` stubs `IntersectionObserver`, which jsdom lacks and framer-motion's `whileInView` needs. For a single non-interactive run use `CI=true npm test -- --watchAll=false`. The deploy workflow runs the tests before building, so a failing test blocks the deploy.
 
 ### Package Manager
 Use npm only. CI installs with `npm ci`, so `package-lock.json` determines what ships. Do not add a `yarn.lock`.
@@ -142,7 +142,7 @@ Use npm only. CI installs with `npm ci`, so `package-lock.json` determines what 
 ## Hosting and Deployment
 - **Domain**: `alouisequiatchon.com` and `www`, registered with Amazon Registrar, DNS in Route 53
 - **Hosting**: S3 bucket behind a CloudFront distribution
-- **Deploy**: `.github/workflows/deploy.yml` runs on every push to `main`. It builds, syncs `build/` to S3, and invalidates CloudFront. There is no staging environment, so a push to `main` is a production deploy
+- **Deploy**: `.github/workflows/deploy.yml` runs on every push to `main`. It runs the tests, builds, syncs `build/` to S3, and invalidates CloudFront. There is no staging environment, so a push to `main` is a production deploy
 - **Caching**: content-hashed assets get a one-year immutable cache; `index.html` and `manifest.json` are always revalidated
 - **Secrets**: AWS credentials, bucket name, and distribution ID are GitHub Actions secrets
 - **Setup details**: `.github/DEPLOYMENT_SETUP.md`

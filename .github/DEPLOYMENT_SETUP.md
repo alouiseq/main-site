@@ -90,9 +90,10 @@ Once secrets are configured:
 **On every push to main:**
 1. ✅ Checks out your code
 2. ✅ Installs Node.js and dependencies
-3. ✅ Runs `npm run build`
-4. ✅ Syncs `build/` folder to S3 (with smart caching)
-5. ✅ Invalidates CloudFront cache (changes appear immediately)
+3. ✅ Runs the tests (a failure stops the deploy)
+4. ✅ Runs `npm run build`
+5. ✅ Syncs `build/` folder to S3 (with smart caching)
+6. ✅ Invalidates CloudFront cache (changes appear immediately)
 
 **Caching Strategy:**
 - Static assets (JS, CSS, images): 1 year cache (max performance)

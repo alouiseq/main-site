@@ -54,9 +54,10 @@ Content is data-driven, so most updates need no component changes:
 
 Every push to `main` deploys to production through GitHub Actions (`.github/workflows/deploy.yml`):
 
-1. Build with `npm ci` and `npm run build`
-2. Sync `build/` to an S3 bucket
-3. Invalidate the CloudFront distribution
+1. Install with `npm ci` and run the tests
+2. Build with `npm run build`
+3. Sync `build/` to an S3 bucket
+4. Invalidate the CloudFront distribution
 
 The site is served by CloudFront in front of S3, with DNS in Route 53. Content-hashed assets are cached for a year, while `index.html` is always revalidated so new deploys show up immediately.
 
