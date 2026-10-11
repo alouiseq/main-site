@@ -1,72 +1,63 @@
 # Personal Website
 
-# Getting Started with Create React App
+Source for [alouisequiatchon.com](https://alouisequiatchon.com), my portfolio site. It is a static React single-page app with four sections: home, journey, projects, and contact.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech Stack
 
-## Available Scripts
+- React 18 (Create React App)
+- Sass/SCSS
+- framer-motion
+- Font Awesome 4.7
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+```bash
+npm install
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The dev server runs at http://localhost:3000 and reloads on change.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`./start-dev.sh` is an optional shortcut that opens a tmux session with the dev server running.
 
-### `npm test`
+## Scripts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Command | What it does |
+|---|---|
+| `npm start` | Runs the dev server |
+| `npm run build` | Builds the production bundle into `build/` |
+| `npm test` | Runs Jest in watch mode |
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+├── App.js          # Composes sections, tracks the active section on scroll
+├── components/     # Navigation, Hero, Journey, Projects, Contact
+├── styles/         # Shared SCSS variables, mixins, typography, animations
+├── utils/          # Shared framer-motion variants
+└── assets/
+    ├── dataFiles/  # experiences.json, projects.json
+    ├── illustrations/
+    └── images/
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Updating Content
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Content is data-driven, so most updates need no component changes:
 
-### `npm run eject`
+- **Work history**: edit `src/assets/dataFiles/experiences.json`
+- **Projects**: edit `src/assets/dataFiles/projects.json` and put screenshots in `src/assets/images/projects/`
+- **Page title and social previews**: edit the meta tags in `public/index.html`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Every push to `main` deploys to production through GitHub Actions (`.github/workflows/deploy.yml`):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Build with `npm ci` and `npm run build`
+2. Sync `build/` to an S3 bucket
+3. Invalidate the CloudFront distribution
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The site is served by CloudFront in front of S3, with DNS in Route 53. Content-hashed assets are cached for a year, while `index.html` is always revalidated so new deploys show up immediately.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See [.github/DEPLOYMENT_SETUP.md](.github/DEPLOYMENT_SETUP.md) for the AWS and GitHub secrets setup.

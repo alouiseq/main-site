@@ -76,18 +76,18 @@ Create a dedicated IAM user with programmatic access:
 Once secrets are configured:
 
 1. Make a small change to your code (e.g., update a comment)
-2. Commit and push to master:
+2. Commit and push to main:
    ```bash
    git add .
    git commit -m "Test automated deployment"
-   git push origin master
+   git push origin main
    ```
 3. Go to GitHub → **Actions** tab to watch the deployment
 4. Check your site after the workflow completes
 
 ## How It Works
 
-**On every push to master:**
+**On every push to main:**
 1. ✅ Checks out your code
 2. ✅ Installs Node.js and dependencies
 3. ✅ Runs `npm run build`
