@@ -19,6 +19,12 @@ const ContactSection = () => {
       icon: 'fa-linkedin',
       url: 'https://www.linkedin.com/in/alouise-quiatchon-b1383b18',
       description: 'Professional network'
+    },
+    {
+      name: 'Twitter',
+      icon: 'fa-twitter',
+      url: 'https://x.com/exectheedge',
+      description: 'Thoughts & updates'
     }
   ];
 
