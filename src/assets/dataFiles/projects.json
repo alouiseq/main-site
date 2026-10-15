@@ -12,19 +12,5 @@
       "deployment": ["Vercel", "AWS App Runner"]
     },
     "featured": true
-  },
-  {
-    "id": "ptracker",
-    "name": "PTracker",
-    "tagline": "Simple Progress Tracker",
-    "description": "A simple progress tracker web application that allows you to track progress towards your goals by uploading task files, with persistent local storage to save your progress.",
-    "image": "ptracker.png",
-    "liveUrl": "https://ptracker.alouisequiatchon.com",
-    "githubUrl": "https://github.com/alouiseq/progress-tracker",
-    "techStack": {
-      "frontend": ["React", "Bootstrap"],
-      "storage": ["Local Storage"]
-    },
-    "featured": true
   }
 ]

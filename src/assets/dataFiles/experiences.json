@@ -3,7 +3,12 @@
     "title": "Fullstack Engineer at Pathstream",
     "duration": "November 2019 - Present",
     "responsibilities": [
-      "Engineer a robust digital learning platform, specializing in hands-on, project-based courses that enhance student engagement and practical skills application."
+      "Leading an AI coding standards initiative across 3 engineering teams: audited scattered AI configs, designed a shared structure and governance model, and ran a cross-team survey that confirmed the direction.",
+      "Built core parts of an internal Python/FastAPI LLM service (LangGraph chat API with persistent conversations, API-key auth, LangSmith tracing), then took over ownership after the original architect left: deploy reliability, security patches, and observability.",
+      "Automated dependency review with a Claude-powered GitHub Actions workflow (auto-approval plus AI triage of major upgrades, hardened against prompt injection), covering about 10 dependency PRs a day across 2 repos.",
+      "Wrote shared Claude Code skills for AI PR review and production-alert diagnosis, and extended an MCP server so AI assistants can query operational data and LLM-generated coaching insights.",
+      "Authored 15+ solution explorations covering vendor decommissions, messaging, billing, analytics, and AI tooling, turning ambiguous problems into decisions signed off by product and engineering.",
+      "Led the decommission of a legacy billing provider across 3 applications (Rails, React, Next.js), removing its SDK, APIs, and checkout flows."
     ]
   },
   {

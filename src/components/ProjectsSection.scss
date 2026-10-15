@@ -49,6 +49,14 @@
     position: relative;
     transition: all 0.3s ease;
 
+    // A single project shouldn't stretch across the full 1200px grid
+    &:only-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: 100%;
+      max-width: 760px;
+    }
+
     &::before {
       content: '';
       position: absolute;
