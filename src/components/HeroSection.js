@@ -51,7 +51,10 @@ const HeroSection = () => {
             <img
               src={heroIllustration}
               alt="Alouise coding with animals"
+              width={784}
+              height={1168}
               loading="eager"
+              fetchpriority="high"
             />
             <div className="image-overlay" />
           </div>

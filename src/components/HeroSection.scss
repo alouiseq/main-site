@@ -118,6 +118,7 @@
       img {
         width: 100%;
         height: auto;
+        aspect-ratio: 784 / 1168; // intrinsic size of me_coding_animals.png; reserves space before load (CLS)
         display: block;
         border-radius: 8px;
         filter: brightness(1.05) contrast(1.1) saturate(1.2);
